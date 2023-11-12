@@ -288,7 +288,6 @@ export const TITLES = {
   puma: "Puma Shox Vulcan",
   vans: "Vans Timu Lara",
 };
-export const RATINGS = [3, 3.5, 3.9, 4, 4.2, 4.5, 4.8];
 export const IMGS = [
   "image-src-1",
   "image-src-2",

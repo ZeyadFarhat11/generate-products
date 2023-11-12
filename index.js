@@ -5,7 +5,6 @@ import {
   IMGS,
   CATEGORIES,
   COLORS,
-  RATINGS,
   TITLES,
   REVIEWS,
   SIZES,
@@ -18,7 +17,7 @@ const generateProduct = () => {
   const reviews = _.sampleSize(REVIEWS, Math.floor(Math.random() * 40));
   const product = {
     title: TITLES[brand.toLocaleLowerCase()],
-    rating: _.sample(RATINGS),
+    rating: (Math.floor(Math.random() * 20) + 30) / 10,
     price: Math.floor(Math.random() * 900) + 100,
     img: imgs[0],
     imgs: imgs.slice(1),
