@@ -17,7 +17,7 @@ export const REVIEWS = [
   {
     username: "john",
     text: "Disappointed with the quality. It didn't meet my expectations.",
-    rating: 2,
+    rating: 3,
   },
   {
     username: "emily",
@@ -37,7 +37,7 @@ export const REVIEWS = [
   {
     username: "michael",
     text: "Not impressed. The product didn't live up to the hype.",
-    rating: 2,
+    rating: 3,
   },
   {
     username: "natalie",
@@ -57,12 +57,12 @@ export const REVIEWS = [
   {
     username: "william",
     text: "Waste of money. I regret buying this product.",
-    rating: 1,
+    rating: 2,
   },
   {
     username: "samantha",
     text: "Highly disappointed. The product arrived damaged.",
-    rating: 1,
+    rating: 2,
   },
   {
     username: "james",
@@ -97,12 +97,12 @@ export const REVIEWS = [
   {
     username: "ethan",
     text: "Below average. It didn't meet my expectations.",
-    rating: 2,
+    rating: 3,
   },
   {
     username: "chloe",
     text: "This product is a disappointment. I regret buying it.",
-    rating: 1,
+    rating: 2,
   },
   {
     username: "daniel",
@@ -127,7 +127,7 @@ export const REVIEWS = [
   {
     username: "aiden",
     text: "Not impressed. The product didn't live up to the hype.",
-    rating: 2,
+    rating: 3,
   },
   {
     username: "sophia",
@@ -137,7 +137,7 @@ export const REVIEWS = [
   {
     username: "logan",
     text: "I expected better. The product didn't deliver as promised.",
-    rating: 2,
+    rating: 3,
   },
   {
     username: "abigail",
@@ -148,126 +148,6 @@ export const REVIEWS = [
     username: "lucas",
     text: "Disappointing product. It didn't meet my expectations.",
     rating: 2,
-  },
-  {
-    username: "amelia",
-    text: "This product is a game-changer. I can't imagine my life without it.",
-    rating: 5,
-  },
-  {
-    username: "carter",
-    text: "Average product. It does the job, but nothing exceptional.",
-    rating: 3,
-  },
-  {
-    username: "mia",
-    text: "The product is terrible. I regret buying it.",
-    rating: 1,
-  },
-  {
-    username: "sebastian",
-    text: "This product exceeded my expectations. I'm impressed with its performance.",
-    rating: 5,
-  },
-  {
-    username: "violet",
-    text: "Not worth the price. I expected better quality.",
-    rating: 2,
-  },
-  {
-    username: "henry",
-    text: "I'm loving this product! It has made my life so much easier.",
-    rating: 5,
-  },
-  {
-    username: "lily",
-    text: "Decent product. It gets the job done.",
-    rating: 3,
-  },
-  {
-    username: "dylan",
-    text: "I'm highly disappointed with this product. It didn't meet my expectations.",
-    rating: 1,
-  },
-  {
-    username: "zoe",
-    text: "I can't recommend this product enough. It's a must-have.",
-    rating: 5,
-  },
-  {
-    username: "jacob",
-    text: "Average product, nothing special about it.",
-    rating: 3,
-  },
-  {
-    username: "hannah",
-    text: "This product is a lifesaver. It solved my problem instantly.",
-    rating: 5,
-  },
-  {
-    username: "wyatt",
-    text: "I expected better quality. The product feels cheap.",
-    rating: 2,
-  },
-  {
-    username: "grace",
-    text: "Impressive product with excellent performance. Highly recommended.",
-    rating: 5,
-  },
-  {
-    username: "noah",
-    text: "Disappointed with this product. It didn't meet my expectations.",
-    rating: 2,
-  },
-  {
-    username: "scarlett",
-    text: "This product is amazing. It exceeded my expectations.",
-    rating: 5,
-  },
-  {
-    username: "samuel",
-    text: "Average product. It does the job but lacks innovation.",
-    rating: 3,
-  },
-  {
-    username: "aubrey",
-    text: "This product is a waste of money. I regret buying it.",
-    rating: 1,
-  },
-  {
-    username: "benjamin",
-    text: "I'm pleasantly surprised by this product. It's better than expected.",
-    rating: 4,
-  },
-  {
-    username: "sophie",
-    text: "Not impressed. The product didn't live up to the hype.",
-    rating: 2,
-  },
-  {
-    username: "joseph",
-    text: "Great value for the price. I'm very satisfied with my purchase.",
-    rating: 4,
-  },
-  {
-    username: "mia",
-    text: "This product is a disappointment. It didn't meet my expectations.",
-    rating: 1,
-  },
-  {
-    username: "leo",
-    text: "I'm extremely impressed with this product. It's worth every penny.",
-    rating: 5,
-  },
-  {
-    username: "madison",
-    text: "Average product. It does the job but lacks innovation.",
-    rating: 3,
-  },
-  {
-    username: "david",
-    text: "This product is terrible. I regret buying it.",
-    rating: 1,
   },
 ];
 
