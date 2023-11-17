@@ -11,30 +11,46 @@ import {
 } from "./data.js";
 import fs from "fs";
 
+function generateId() {
+  let randomString = "";
+  const characters = "0123456789";
+  const length = 12;
+
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    randomString += characters[randomIndex];
+  }
+
+  return randomString;
+}
+
 const generateProduct = () => {
+  const id = generateId();
   const imgs = _.sampleSize(IMGS, 4);
   const brand = _.sample(BRANDS);
-  const reviews = _.sampleSize(REVIEWS, Math.floor(Math.random() * 40));
+  const reviews = _.sampleSize(REVIEWS, Math.floor(Math.random() * 40)).map(
+    (review) => ({ ...review, product: id })
+  );
   const product = {
-    title: TITLES[brand.toLocaleLowerCase()],
-    rating: (Math.floor(Math.random() * 20) + 30) / 10,
+    title:
+      TITLES[brand.toLocaleLowerCase()] +
+      " " +
+      Math.floor(Math.random() * 10000),
     price: Math.floor(Math.random() * 900) + 100,
-    img: imgs[0],
+    image: imgs[0],
     imgs: imgs.slice(1),
     discount: Math.floor(Math.random() * 10) + 15,
     brand,
     category: _.sample(CATEGORIES),
     freeShipping: Math.random() > 0.5,
-    colors: Array(Math.floor(Math.random() * 3) + 1)
-      .fill(0)
-      .map(() => _.sample(COLORS)),
+    colors: _.sampleSize(COLORS, Math.floor(Math.random() * 3) + 1),
     sizes: SIZES.slice(0, Math.floor(Math.random() * SIZES.length) + 2),
     available: Math.random() > 0.1,
     label: Math.random() > 0.8 ? "HOT" : undefined,
-    reviews,
-    reviewsCount: reviews.length,
+    // evaluation: reviews,
+    // reviewsCount: reviews.length,
     description: DESCRIPTIONS[brand.toLocaleLowerCase()],
-
+    selled: 0,
     active: true,
   };
 
@@ -42,7 +58,7 @@ const generateProduct = () => {
 };
 
 function getLastNumberInFileName() {
-  const files = fs.readdirSync("./"); // Assuming the files are in the current directory
+  const files = fs.readdirSync("./");
 
   let lastNumber = 0;
 
@@ -70,7 +86,7 @@ for (let i = 0; i < wantedProductsNumber; i++) {
 }
 fs.writeFileSync(
   `./products-${getLastNumberInFileName() + 1}.json`,
-  JSON.stringify(products),
+  JSON.stringify(products, null, "\t"),
   "utf-8"
 );
 console.log("Products Generated Successfully ✅");

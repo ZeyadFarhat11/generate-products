@@ -1,153 +1,161 @@
 export const REVIEWS = [
   {
     username: "jennifer",
-    text: "I'm loving this product! It exceeded my expectations. Highly recommended.",
-    rating: 5,
+    content:
+      "I'm loving this product! It exceeded my expectations. Highly recommended.",
+    rate: 5,
   },
   {
     username: "alex",
-    text: "Not bad, but could be better. It's just okay.",
-    rating: 3,
+    content: "Not bad, but could be better. It's just okay.",
+    rate: 3,
   },
   {
     username: "sarah",
-    text: "Absolutely fantastic! This product is a game-changer.",
-    rating: 5,
+    content: "Absolutely fantastic! This product is a game-changer.",
+    rate: 5,
   },
   {
     username: "john",
-    text: "Disappointed with the quality. It didn't meet my expectations.",
-    rating: 3,
+    content: "Disappointed with the quality. It didn't meet my expectations.",
+    rate: 3,
   },
   {
     username: "emily",
-    text: "Great value for the price. I'm very satisfied with my purchase.",
-    rating: 4,
+    content: "Great value for the price. I'm very satisfied with my purchase.",
+    rate: 4,
   },
   {
     username: "david",
-    text: "Poor customer service. The company needs to improve their support.",
-    rating: 2,
+    content:
+      "Poor customer service. The company needs to improve their support.",
+    rate: 2,
   },
   {
     username: "lisa",
-    text: "This product is a lifesaver. It solved my problem instantly.",
-    rating: 5,
+    content: "This product is a lifesaver. It solved my problem instantly.",
+    rate: 5,
   },
   {
     username: "michael",
-    text: "Not impressed. The product didn't live up to the hype.",
-    rating: 3,
+    content: "Not impressed. The product didn't live up to the hype.",
+    rate: 3,
   },
   {
     username: "natalie",
-    text: "I can't imagine my life without this product. It's amazing!",
-    rating: 5,
+    content: "I can't imagine my life without this product. It's amazing!",
+    rate: 5,
   },
   {
     username: "peter",
-    text: "Average product. Nothing special about it.",
-    rating: 3,
+    content: "Average product. Nothing special about it.",
+    rate: 3,
   },
   {
     username: "olivia",
-    text: "The best product I've ever used. I'm blown away by its performance.",
-    rating: 5,
+    content:
+      "The best product I've ever used. I'm blown away by its performance.",
+    rate: 5,
   },
   {
     username: "william",
-    text: "Waste of money. I regret buying this product.",
-    rating: 2,
+    content: "Waste of money. I regret buying this product.",
+    rate: 2,
   },
   {
     username: "samantha",
-    text: "Highly disappointed. The product arrived damaged.",
-    rating: 2,
+    content: "Highly disappointed. The product arrived damaged.",
+    rate: 2,
   },
   {
     username: "james",
-    text: "Decent product, but there are better alternatives available.",
-    rating: 3,
+    content: "Decent product, but there are better alternatives available.",
+    rate: 3,
   },
   {
     username: "emma",
-    text: "I'm in love with this product. It exceeded my expectations.",
-    rating: 5,
+    content: "I'm in love with this product. It exceeded my expectations.",
+    rate: 5,
   },
   {
     username: "ryan",
-    text: "Not worth the price. I expected better quality.",
-    rating: 2,
+    content: "Not worth the price. I expected better quality.",
+    rate: 2,
   },
   {
     username: "ava",
-    text: "This product is a game-changer. I can't recommend it enough.",
-    rating: 5,
+    content: "This product is a game-changer. I can't recommend it enough.",
+    rate: 5,
   },
   {
     username: "matthew",
-    text: "The product is good, but the customer service needs improvement.",
-    rating: 4,
+    content: "The product is good, but the customer service needs improvement.",
+    rate: 4,
   },
   {
     username: "mia",
-    text: "I'm extremely satisfied with this product. It's worth every penny.",
-    rating: 5,
+    content:
+      "I'm extremely satisfied with this product. It's worth every penny.",
+    rate: 5,
   },
   {
     username: "ethan",
-    text: "Below average. It didn't meet my expectations.",
-    rating: 3,
+    content: "Below average. It didn't meet my expectations.",
+    rate: 3,
   },
   {
     username: "chloe",
-    text: "This product is a disappointment. I regret buying it.",
-    rating: 2,
+    content: "This product is a disappointment. I regret buying it.",
+    rate: 2,
   },
   {
     username: "daniel",
-    text: "Impressive product with excellent quality. Highly recommended.",
-    rating: 5,
+    content: "Impressive product with excellent quality. Highly recommended.",
+    rate: 5,
   },
   {
     username: "grace",
-    text: "The product is average. It does the job, but nothing extraordinary.",
-    rating: 3,
+    content:
+      "The product is average. It does the job, but nothing extraordinary.",
+    rate: 3,
   },
   {
     username: "jackson",
-    text: "This product is a complete waste of money. I'm highly dissatisfied.",
-    rating: 1,
+    content:
+      "This product is a complete waste of money. I'm highly dissatisfied.",
+    rate: 1,
   },
   {
     username: "harper",
-    text: "I'm pleasantly surprised by this product. It exceeded my expectations.",
-    rating: 4,
+    content:
+      "I'm pleasantly surprised by this product. It exceeded my expectations.",
+    rate: 4,
   },
   {
     username: "aiden",
-    text: "Not impressed. The product didn't live up to the hype.",
-    rating: 3,
+    content: "Not impressed. The product didn't live up to the hype.",
+    rate: 3,
   },
   {
     username: "sophia",
-    text: "This product is amazing. It's a game-changer for me.",
-    rating: 5,
+    content: "This product is amazing. It's a game-changer for me.",
+    rate: 5,
   },
   {
     username: "logan",
-    text: "I expected better. The product didn't deliver as promised.",
-    rating: 3,
+    content: "I expected better. The product didn't deliver as promised.",
+    rate: 3,
   },
   {
     username: "abigail",
-    text: "I'm extremely satisfied with this product. It's worth every penny.",
-    rating: 5,
+    content:
+      "I'm extremely satisfied with this product. It's worth every penny.",
+    rate: 5,
   },
   {
     username: "lucas",
-    text: "Disappointing product. It didn't meet my expectations.",
-    rating: 2,
+    content: "Disappointing product. It didn't meet my expectations.",
+    rate: 2,
   },
 ];
 
@@ -169,14 +177,25 @@ export const TITLES = {
   vans: "Vans Timu Lara",
 };
 export const IMGS = [
-  "image-src-1",
-  "image-src-2",
-  "image-src-3",
-  "image-src-4",
-  "image-src-5",
+  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/product-1.png",
+  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/floating-product-2.png",
+  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/floating-product-3.png",
+  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/product-5.png",
+  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/product-6.png",
+  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/product-7.png",
+  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/product-9.png",
+  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/floating-product-1.webp",
 ];
 export const BRANDS = ["Adidas", "Converse", "Nike", "Puma", "Vans"];
-export const CATEGORIES = ["Shoes", "T-shirts", "Bags", "Jackets"];
-export const COLORS = ["red", "blue", "yellow", "violet", "black"];
+export const CATEGORIES = ["Shoes", "Belts", "Bags"];
+export const COLORS = [
+  "red",
+  "green",
+  "blue",
+  "black",
+  "yellow",
+  "violet",
+  "white",
+];
 
 export const SIZES = ["SM", "MD", "LG", "XL", "2XL"];
