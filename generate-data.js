@@ -177,14 +177,15 @@ export const TITLES = {
   vans: "Vans Timu Lara",
 };
 export const IMGS = [
-  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/product-1.png",
-  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/floating-product-2.png",
-  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/floating-product-3.png",
-  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/product-5.png",
-  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/product-6.png",
-  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/product-7.png",
-  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/product-9.png",
-  "C:/Users/zeyad/OneDrive/Desktop/E-Comm/src/assets/img/products/floating-product-1.webp",
+  "C:/Users/Mahmoud/Desktop/New folder/1.webp",
+  "C:/Users/Mahmoud/Desktop/New folder/2.png",
+  "C:/Users/Mahmoud/Desktop/New folder/3.png",
+  "C:/Users/Mahmoud/Desktop/New folder/4.png",
+  "C:/Users/Mahmoud/Desktop/New folder/5.png",
+  "C:/Users/Mahmoud/Desktop/New folder/6.png",
+  "C:/Users/Mahmoud/Desktop/New folder/7.png",
+  "C:/Users/Mahmoud/Desktop/New folder/8.png",
+  "C:/Users/Mahmoud/Desktop/New folder/9.png",
 ];
 export const BRANDS = ["Adidas", "Converse", "Nike", "Puma", "Vans"];
 export const CATEGORIES = ["Shoes", "Belts", "Bags"];

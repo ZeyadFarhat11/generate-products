@@ -1,7 +1,8 @@
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
 import { readFileSync, readdirSync } from "fs";
+import { Presets, SingleBar } from "cli-progress";
 
-const EMAIL = "admin@admin.com";
+const EMAIL = "admin@gmail.com";
 const PASSWORD = "000000";
 
 const lastProductsFile = readdirSync(".")
@@ -9,6 +10,9 @@ const lastProductsFile = readdirSync(".")
   .at(-1);
 const productsString = readFileSync(lastProductsFile, "utf-8");
 const products = JSON.parse(productsString);
+
+const bar = new SingleBar({}, Presets.shades_classic);
+bar.start(products.length);
 
 const brands = {
   Adidas: "1",
@@ -40,7 +44,11 @@ const sizes = {
 };
 
 const main = async () => {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({
+    headless: false,
+    executablePath:
+      "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
+  });
   const page = await browser.newPage();
   await page.setViewport({
     width: 1600,
@@ -55,7 +63,7 @@ const main = async () => {
   await page.goto("http://127.0.0.1:8000/admin/store/product/add/");
   await page.waitForSelector('input[name="title"]');
 
-  for (let i = 2; i < products.length; i++) {
+  for (let i = 0; i < products.length; i++) {
     const product = products[i];
     // console.log("Current Product =>", product);
     await page.type('input[name="title"]', product.title);
@@ -73,6 +81,9 @@ const main = async () => {
     const colorsSelect = await page.$('select[name="colors"]');
     await colorsSelect.select(...product.colors.map((color) => colors[color]));
 
+    const imagesSelect = await page.$('select[name="images"]');
+    await imagesSelect.select(...product.imgs.map((e) => String(e)));
+
     const sizesSelect = await page.$('select[name="sizes"]');
     await sizesSelect.select(...product.sizes.map((size) => sizes[size]));
 
@@ -87,10 +98,12 @@ const main = async () => {
 
     await page.click('input[name="_addanother"]');
 
+    bar.update(i + 1);
     await sleep(300);
   }
 
-  await browser.close();
+  bar.stop();
+  // await browser.close();
 };
 main();
 

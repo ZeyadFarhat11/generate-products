@@ -8,7 +8,7 @@ import {
   TITLES,
   REVIEWS,
   SIZES,
-} from "./data.js";
+} from "./generate-data.js";
 import fs from "fs";
 
 function generateId() {
@@ -26,7 +26,12 @@ function generateId() {
 
 const generateProduct = () => {
   const id = generateId();
-  const imgs = _.sampleSize(IMGS, 4);
+  const imgs = _.sampleSize(
+    Array(9)
+      .fill(0)
+      .map((_, i) => i + 13),
+    Math.floor(Math.random() * 3) + 2
+  );
   const brand = _.sample(BRANDS);
   const reviews = _.sampleSize(REVIEWS, Math.floor(Math.random() * 40)).map(
     (review) => ({ ...review, product: id })
@@ -37,8 +42,8 @@ const generateProduct = () => {
       " " +
       Math.floor(Math.random() * 10000),
     price: Math.floor(Math.random() * 900) + 100,
-    image: imgs[0],
-    imgs: imgs.slice(1),
+    image: _.sample(IMGS),
+    imgs,
     discount: Math.floor(Math.random() * 10) + 15,
     brand,
     category: _.sample(CATEGORIES),
