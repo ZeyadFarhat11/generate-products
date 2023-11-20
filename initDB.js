@@ -1,9 +1,7 @@
 import axios from "axios";
 import FormData from "form-data";
 import { createReadStream } from "fs";
-
-const EMAIL = "admin@gmail.com";
-const PASSWORD = "000000";
+import { EMAIL, IMGS, PASSWORD } from "./data.js";
 
 const getAccessToken = async () => {
   const {
@@ -31,18 +29,6 @@ const createImage = async (path, token) => {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
-
-const images = [
-  "C:/Users/Mahmoud/Desktop/New folder/1.webp",
-  "C:/Users/Mahmoud/Desktop/New folder/2.png",
-  "C:/Users/Mahmoud/Desktop/New folder/3.png",
-  "C:/Users/Mahmoud/Desktop/New folder/4.png",
-  "C:/Users/Mahmoud/Desktop/New folder/5.png",
-  "C:/Users/Mahmoud/Desktop/New folder/6.png",
-  "C:/Users/Mahmoud/Desktop/New folder/7.png",
-  "C:/Users/Mahmoud/Desktop/New folder/8.png",
-  "C:/Users/Mahmoud/Desktop/New folder/9.png",
-];
 
 const main = async () => {
   const token = await getAccessToken();
@@ -76,7 +62,7 @@ const main = async () => {
   // await createItem("2XL", "sizes", token, "size");
 
   // images
-  for (let image of images) {
+  for (let image of IMGS) {
     await createImage(image, token);
   }
 };

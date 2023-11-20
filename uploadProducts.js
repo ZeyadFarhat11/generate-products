@@ -1,9 +1,7 @@
 import puppeteer from "puppeteer-core";
 import { readFileSync, readdirSync } from "fs";
 import { Presets, SingleBar } from "cli-progress";
-
-const EMAIL = "admin@gmail.com";
-const PASSWORD = "000000";
+import { EMAIL, PASSWORD } from "./data.js";
 
 const lastProductsFile = readdirSync(".")
   .filter((file) => file.includes("products-"))
@@ -43,6 +41,8 @@ const sizes = {
   "2XL": "5",
 };
 
+const isTest = process.argv.includes("--test");
+
 const main = async () => {
   const browser = await puppeteer.launch({
     headless: false,
@@ -63,47 +63,54 @@ const main = async () => {
   await page.goto("http://127.0.0.1:8000/admin/store/product/add/");
   await page.waitForSelector('input[name="title"]');
 
-  for (let i = 0; i < products.length; i++) {
+  let maxIterations = isTest ? 1 : products.length;
+  for (let i = 0; i < maxIterations; i++) {
     const product = products[i];
-    // console.log("Current Product =>", product);
-    await page.type('input[name="title"]', product.title);
-    await page.type('textarea[name="description"]', product.description);
-    await page.type('input[name="price"]', product.price.toString());
-    await page.type('input[name="discount"]', product.discount.toString());
-    await page.type('input[name="selled"]', product.selled.toString());
+    try {
+      await page.type('input[name="title"]', product.title);
+      await page.type('textarea[name="description"]', product.description);
+      await page.type('input[name="price"]', product.price.toString());
+      await page.type('input[name="discount"]', product.discount.toString());
+      await page.type('input[name="selled"]', product.selled.toString());
+      await page.type('input[name="label"]', product.label || "");
 
-    const freeShippingCheckbox = await page.$("#id_free_shipping");
-    if (product.freeShipping) await freeShippingCheckbox.click();
+      const freeShippingCheckbox = await page.$("#id_free_shipping");
+      if (product.freeShipping) await freeShippingCheckbox.click();
 
-    const brandSelect = await page.$('select[name="brand"]');
-    await brandSelect.select(brands[product.brand]);
+      const brandSelect = await page.$('select[name="brand"]');
+      await brandSelect.select(brands[product.brand]);
 
-    const colorsSelect = await page.$('select[name="colors"]');
-    await colorsSelect.select(...product.colors.map((color) => colors[color]));
+      const colorsSelect = await page.$('select[name="colors"]');
+      await colorsSelect.select(
+        ...product.colors.map((color) => colors[color])
+      );
 
-    const imagesSelect = await page.$('select[name="images"]');
-    await imagesSelect.select(...product.imgs.map((e) => String(e)));
+      const imagesSelect = await page.$('select[name="images"]');
+      await imagesSelect.select(...product.images.map((e) => String(e)));
 
-    const sizesSelect = await page.$('select[name="sizes"]');
-    await sizesSelect.select(...product.sizes.map((size) => sizes[size]));
+      const sizesSelect = await page.$('select[name="sizes"]');
+      await sizesSelect.select(...product.sizes.map((size) => sizes[size]));
 
-    const imageInput = await page.$('input[name="image"]');
-    await imageInput.uploadFile(product.image);
+      const imageInput = await page.$('input[name="image"]');
+      await imageInput.uploadFile(product.image);
 
-    const otherImagesInput = await page.$('input[name="image"]');
-    await otherImagesInput.uploadFile(product.image);
+      const categorySelect = await page.$('select[name="category"]');
+      await categorySelect.select(categories[product.category]);
 
-    const categorySelect = await page.$('select[name="category"]');
-    await categorySelect.select(categories[product.category]);
+      if (!isTest) {
+        await page.click('input[name="_addanother"]');
+      }
 
-    await page.click('input[name="_addanother"]');
-
-    bar.update(i + 1);
-    await sleep(300);
+      bar.update(i + 1);
+      await sleep(300);
+    } catch (err) {
+      console.log(`${product.title} Failed💥`);
+      console.log(err);
+    }
   }
 
   bar.stop();
-  // await browser.close();
+  await browser.close();
 };
 main();
 

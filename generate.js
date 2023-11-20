@@ -8,7 +8,7 @@ import {
   TITLES,
   REVIEWS,
   SIZES,
-} from "./generate-data.js";
+} from "./data.js";
 import fs from "fs";
 
 function generateId() {
@@ -26,16 +26,16 @@ function generateId() {
 
 const generateProduct = () => {
   const id = generateId();
-  const imgs = _.sampleSize(
-    Array(9)
+  const images = _.sampleSize(
+    Array(IMGS.length)
       .fill(0)
-      .map((_, i) => i + 13),
+      .map((_, i) => i + 12),
     Math.floor(Math.random() * 3) + 2
   );
   const brand = _.sample(BRANDS);
-  const reviews = _.sampleSize(REVIEWS, Math.floor(Math.random() * 40)).map(
-    (review) => ({ ...review, product: id })
-  );
+  // const reviews = _.sampleSize(REVIEWS, Math.floor(Math.random() * 40)).map(
+  //   (review) => ({ ...review, product: id })
+  // );
   const product = {
     title:
       TITLES[brand.toLocaleLowerCase()] +
@@ -43,7 +43,7 @@ const generateProduct = () => {
       Math.floor(Math.random() * 10000),
     price: Math.floor(Math.random() * 900) + 100,
     image: _.sample(IMGS),
-    imgs,
+    images,
     discount: Math.floor(Math.random() * 10) + 15,
     brand,
     category: _.sample(CATEGORIES),

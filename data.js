@@ -159,6 +159,9 @@ export const REVIEWS = [
   },
 ];
 
+export const EMAIL = "admin@admin.com";
+export const PASSWORD = "000000";
+
 export const DESCRIPTIONS = {
   adidas:
     "The Adidas Ultraboost shoes offer an incredibly comfortable fit, with their cushioned sole and breathable upper. The only downside was that the laces were a bit too long and required double knotting, but overall, these shoes are a top-notch choice for running enthusiasts.",
@@ -177,15 +180,17 @@ export const TITLES = {
   vans: "Vans Timu Lara",
 };
 export const IMGS = [
-  "C:/Users/Mahmoud/Desktop/New folder/1.webp",
-  "C:/Users/Mahmoud/Desktop/New folder/2.png",
-  "C:/Users/Mahmoud/Desktop/New folder/3.png",
-  "C:/Users/Mahmoud/Desktop/New folder/4.png",
-  "C:/Users/Mahmoud/Desktop/New folder/5.png",
-  "C:/Users/Mahmoud/Desktop/New folder/6.png",
-  "C:/Users/Mahmoud/Desktop/New folder/7.png",
-  "C:/Users/Mahmoud/Desktop/New folder/8.png",
-  "C:/Users/Mahmoud/Desktop/New folder/9.png",
+  "C:/Users/zeyad/OneDrive/Desktop/nodejs/generate-ecomm-products/imgs/ (1).png",
+  "C:/Users/zeyad/OneDrive/Desktop/nodejs/generate-ecomm-products/imgs/ (2).png",
+  "C:/Users/zeyad/OneDrive/Desktop/nodejs/generate-ecomm-products/imgs/ (3).png",
+  "C:/Users/zeyad/OneDrive/Desktop/nodejs/generate-ecomm-products/imgs/ (4).png",
+  "C:/Users/zeyad/OneDrive/Desktop/nodejs/generate-ecomm-products/imgs/ (5).png",
+  "C:/Users/zeyad/OneDrive/Desktop/nodejs/generate-ecomm-products/imgs/ (6).png",
+  "C:/Users/zeyad/OneDrive/Desktop/nodejs/generate-ecomm-products/imgs/ (7).png",
+  "C:/Users/zeyad/OneDrive/Desktop/nodejs/generate-ecomm-products/imgs/ (8).png",
+  "C:/Users/zeyad/OneDrive/Desktop/nodejs/generate-ecomm-products/imgs/ (9).png",
+  "C:/Users/zeyad/OneDrive/Desktop/nodejs/generate-ecomm-products/imgs/ (10).png",
+  "C:/Users/zeyad/OneDrive/Desktop/nodejs/generate-ecomm-products/imgs/ (11).png",
 ];
 export const BRANDS = ["Adidas", "Converse", "Nike", "Puma", "Vans"];
 export const CATEGORIES = ["Shoes", "Belts", "Bags"];
